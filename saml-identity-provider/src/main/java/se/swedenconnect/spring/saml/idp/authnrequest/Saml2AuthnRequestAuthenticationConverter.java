@@ -99,7 +99,7 @@ public class Saml2AuthnRequestAuthenticationConverter implements AuthenticationC
   public Saml2AuthnRequestAuthenticationConverter(final MetadataResolver metadataResolver,
       final IdentityProviderSettings settings) {
     this.metadataResolver = Objects.requireNonNull(metadataResolver, "metadataResolver must not be null");
-    this.settings = settings;
+    this.settings = Objects.requireNonNull(settings, "settings must not be null");
 
     // Initialize the binding descriptors ...
     //
